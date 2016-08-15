@@ -7,7 +7,7 @@ class UsersController extends AppController {
 		parent::beforeFilter();
 		// Allow users to register and logout.
 		$this->Auth->allow('login','logout');		
-	}
+	} 
 	public function login(){
 		if($this->Auth->loggedIn()){
 			return $this->redirect(array('controller' => 'posts','action' => 'index'));
